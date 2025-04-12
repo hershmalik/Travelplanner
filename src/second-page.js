@@ -43,7 +43,7 @@ async function generateItinerary() {
         itineraryTableBody.innerHTML = "";
         
         // Make API request
-        const response = await fetch(`http://127.0.0.1:9876/generate-itinerary?destination=${encodeURIComponent(destination)}&preferences=${encodeURIComponent(JSON.stringify(preferences))}`);
+        const response = await fetch(`/generate-itinerary?destination=${encodeURIComponent(destination)}&preferences=${encodeURIComponent(JSON.stringify(preferences))}`);
         
         // Hide loading indicator
         if (loadingIndicator) loadingIndicator.style.display = "none";
